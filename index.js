@@ -9,9 +9,10 @@ app.get('/*', function(request, response) {
   response.end(request.path.slice(1));
 });
 io.sockets.on('connection', function (socket) {
+  console.log('connected')
   socket.on('echo', function (data) {
+    console.log('echo', data);
     socket.emit('echo', data);
-    console.log(data);
   });
 });
 var port = process.env.PORT || 3000;

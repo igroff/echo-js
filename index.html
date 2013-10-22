@@ -10,7 +10,6 @@
 <body>
 <script>
 /*! Socket.IO.js build:0.9.16, development. Copyright(c) 2011 LearnBoost <dev@learnboost.com> MIT Licensed */
-
 var io = ('undefined' === typeof module ? {} : module.exports);
 (function() {
 
@@ -3335,13 +3334,14 @@ var io = ('undefined' === typeof module ? {} : module.exports);
 if (typeof define === "function" && define.amd) {
   define([], function () { return io; });
 }
-}
-</script>
-<script>
-var socket = io.connect(document.URL + '/..');
-socket.emit('echo', 'hi');
+})();
+var socket = io.connect();
+socket.on('connect', function() {
+  console.log('connect');
+  socket.emit('echo', 'hi');
+});
 socket.on('echo', function (data) {
-  console.log(data);
+  console.log('echo from server', data);
 });
 </script>
 </body>

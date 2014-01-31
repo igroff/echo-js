@@ -1,6 +1,6 @@
 {
   "name": "echo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "If you GET it, I'll send it",
   "main": "index.js",
   "scripts": {

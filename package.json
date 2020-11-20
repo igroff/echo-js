@@ -1,15 +1,14 @@
 {
   "name": "echo",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "If you GET it, I'll send it",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Will Ballard",
-  "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~3.3.7",
-    "socket.io": "~0.9.16",
-    "ws": "~0.4.31"
-  }}
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3",
+    "ws": "^7.4.0"
+  }
+}
